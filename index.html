@@ -1,14 +1,33 @@
 ---
-layout: archive
-author_profile: true
+layout: splash
+author_profile: false
+
+title: "Full Stack Web Development"
+excerpt: "We take your ideas from concept to reality using agile techniques and Ruby on Rails."
+
+header:
+  overlay_image: "cool_pattern_splash.jpeg"
+  caption: ""
+
+feature_row:
+  - image_path: unsplash-gallery-image-1-th.jpg
+    alt: "placeholder image 1"
+    title: "Placeholder 1"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+  - image_path: unsplash-gallery-image-2-th.jpg
+    alt: "placeholder image 2"
+    title: "Placeholder 2"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+  - image_path: unsplash-gallery-image-3-th.jpg
+    title: "Placeholder 3"
+    excerpt: "This is some sample content that goes here with **Markdown** formatting."
 ---
 
 {% include base_path %}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts }}</h3>
-
-{% for post in paginator.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+{% include feature_row %}
 
 {% include paginator.html %}
