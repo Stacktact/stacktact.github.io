@@ -1,31 +1,26 @@
 # main links links
 main:
   - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide
 
   - title: "About"
-    url: https://mmistakes.github.io/minimal-mistakes/
-terrain_volume_docs:
+    url: https://mmistakes.github.io/minimal-mistakes
+
+terrain_volume_live:
   - title: Getting Started
     children:
+      - title: "Welcome"
+        url: /interactive/terrain_volume_live
       - title: "Quick-Start Guide"
-        url: /docs/quick-start-guide/
-      - title: "Structure"
-        url: /docs/structure/
-      - title: "Installation"
-        url: /docs/installation/
-      - title: "Upgrading"
-        url: /docs/upgrading/
+        url: /interactive/terrain_volume_live/quick-start-guide
 
-  - title: Customization
+  - title: Documentation
     children:
-      - title: "Configuration"
-        url: /docs/configuration/
-      - title: "Navigation"
-        url: /docs/navigation/
-      - title: "UI Text"
-        url: /docs/ui-text/
-      - title: "Authors"
-        url: /docs/authors/
-      - title: "Layouts"
-        url: /docs/layouts/
+      - title: "Deformer"
+        url: /interactive/terrain_volume_live/deformer
+      - title: "Terrain Area"
+        url: /interactive/terrain_volume_live/terrain_area
+      - title: "Local Height Map"
+        url: /interactive/terrain_volume_live/local_height_map
+      - title: "FAQs"
+        url: /interactive/terrain_volume_live/faqs
