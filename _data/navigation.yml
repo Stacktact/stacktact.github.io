@@ -11,7 +11,7 @@ dynamic_terrain_objects:
       - title: "Quick-Start Guide"
         url: /interactive/dynamic_terrain_objects/quick_start_guide
       - title: "WebPlayer Demo"
-        url: /dynamic_terrain_objects_demo/Builds.html
+        url: /dynamic_terrain_objects_demo/WebplayerBuilds.html
 
   - title: Go Deeper
     children:
