@@ -1,5 +1,7 @@
 # main links links
 main:
+  - title: "Interactive"
+    url: /interactive
   - title: "About"
     url: /about
 
