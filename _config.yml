@@ -97,6 +97,7 @@ author:
 include:
   - .htaccess
   - _pages
+  - _dynamic_terrain_objects
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -156,6 +157,7 @@ timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins
 gems:
+  - jekyll-redirect-from
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist

@@ -1,26 +1,25 @@
 # main links links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide
-
   - title: "About"
-    url: https://mmistakes.github.io/minimal-mistakes
+    url: /about
 
-terrain_volume_live:
+dynamic_terrain_objects:
   - title: Getting Started
     children:
       - title: "Welcome"
-        url: /interactive/terrain_volume_live
+        url: /interactive/dynamic_terrain_objects/welcome
       - title: "Quick-Start Guide"
-        url: /interactive/terrain_volume_live/quick-start-guide
+        url: /interactive/dynamic_terrain_objects/quick_start_guide
+      - title: "WebPlayer Demo"
+        url: /dynamic_terrain_objects_demo/Builds.html
 
-  - title: Documentation
+  - title: Go Deeper
     children:
-      - title: "Deformer"
-        url: /interactive/terrain_volume_live/deformer
-      - title: "Terrain Area"
-        url: /interactive/terrain_volume_live/terrain_area
-      - title: "Local Height Map"
-        url: /interactive/terrain_volume_live/local_height_map
+      - title: "Deformer Class"
+        url: /interactive/dynamic_terrain_objects/deformer
+      - title: "Terrain Area Class"
+        url: /interactive/dynamic_terrain_objects/terrain_area
+      - title: "Local Height Map CLass"
+        url: /interactive/dynamic_terrain_objects/local_height_map
       - title: "FAQs"
-        url: /interactive/terrain_volume_live/faqs
+        url: /interactive/dynamic_terrain_objects/faqs
