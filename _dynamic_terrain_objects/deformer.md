@@ -11,6 +11,138 @@ sidebar:
 
 {% include base_path %}
 
+The Deformer class is the primary interface for manipulating terrain at runtime. 
+When an instance of the Deformer Script is attached to a GameObject, several 
+things happen:
+
+1. An instance of the [Area](/interactive/dynamic_terrain_objects/terrain_area) class is created.
+2. A [LocalHeightMap](/interactive/dynamic_terrain_objects/local_height_map) is instantiated. This is a cached representation of the Deformer object's geometry represented in terrain heightmap values.
+3. A LocalAlphaMap is instantiated. This is a cached representation of which positions within the terrain Area should be affected by texture updates.
+4. Current position, scale, and rotation are tracked so that if they change we can update the Area instance and LocalMaps accordingly. Note this only occurs if the variable "keepTerrainAreaUpdated" is set to true (default).
+
+## Variables
+
+### terrainAreaPadding
+
+How many vertices should we pad out from the objects bounding box? Default is the objects bounding box + 1
+
+### terrainTextureIndex
+
+Texture to apply when updating the alphamap. Must be added to the Terrain object via the inspector and then referenced by its index 0, 1, 2, etc
+
+### terrainTextureOpacity
+
+What opacity should any texture updates be set to - 0.0 to 1.0
+
+### alphaPadding
+
+padding of texture area in terrain units
+
+### AlphaFitType
+
+Should the alphamap be changed for any column that is touching the deformer (column fit) or should we only change for cells completely inside the collider (vertex fit)
+
+### HeightFitType
+
+Should the heightmap be changed for any column that is touching the deformer (column fit) or should we only change for cells completely inside the collider (vertex fit)
+
+### keepTerrainAreaUpdated
+
+If checked, any change to the position or rotation of the game object with this script will update the location and size of the Terrain Area so that subsequent terrain modifications will occur in the correct location and in the correct shape. Turning this off is more performant if you are able to call "UpdateAreaPosition()" manually, but if an object is making continious updates to a terrain while moving you probably want to have this set to true (on).
+
+### terrain;
+
+The terrain instance you want this object to modify. Defaults to Terrain.activeTerrain if not set. Cannot currently handle multiple terrains, but you could always switch them on the fly via scripting.
+
+## Public Functions
+
+### AddNow()
+
+Adds height to the terrain immediately. Any portion of the object that is higher 
+than the terrain Area will be raised to match the object's geometry. If the object
+is lower than the terrain, no changes will be made.
+
+### Add()
+
+Exactly the same as AddNow(), but does not automatically commit the height changes
+to the terrain. This allows you to batch together multiple height edits to the same Area
+with minimal performance impact. Call SetHeights() to commit height changes set to the 
+Area by Add().
+
+### SubtractNow()
+
+Subtracts height from the terrain immediately. Any portion of the object that is lower 
+than the terrain Area will be removed to match the object's geometry. If the object
+is higher than the terrain, no changes will be made.
+
+### Subtract()
+
+Exactly the same as SubtractNow(), but does not automatically commit the height changes
+to the terrain. This allows you to batch together multiple height edits to the same Area
+with minimal performance impact. Call SetHeights() to commit height changes set to the 
+Area by Subtract().
+
+### SmoothNow()
+
+Immediately smooths terrain relative to the Deformer object's position. Only smooths terrain within 
+the boundry of it's terrain Area (the object + padding)
+
+### Smooth()
+
+Exactly the same as SmoothNow(), but does not automatically commit the changes. Call SetHeights() 
+to commit height changes set to the Area by Smooth().
+
+### TextureNow()
+
+Immediately update the texture relative to the Deformer's position, rotation, scale, and any alphaPadding
+specified for this object.
+
+### Texture()
+
+Exactly the same as TextureNow(), but does not automatically commit the changes. Call SetAlphas() 
+to commit alpha changes set to the Area by Texture().
+
+### Displace()
+
+Simulates the creation of a crater if the object is positioned partially below the terrain. 
+Creates a pedastle type formation when the object is positioned above the terrain. This 
+function is a combination of Subtract(), Smooth(), and Texture() which demonstrates a simple way 
+the core functions can be composed together to create more complex deformations. 
+
+### ShowAreaVertices()
+
+[DEBUG] Create a grid of spheres that help visualize the terrain area
+and which vertices are inside of the deformer object's collider
+
+### ShowAreaAlphas()
+
+[DEBUG] Create a grid of boxes that help visualize the terrain area alpha columns
+and which of those columns are inside of the deformer object's collider
+
+### DestroyDebugObjects()
+
+[DEBUG] Remove any debug objects in the scene created by this class
+
+### UpdateAreaPosition()
+
+Manually update the Deformer instance position, scale, and rotation for the Area and LocalMaps. 
+This is necessary to call before saving heights or alphas only if "keepTerrainAreaUpdated" is set to false 
+so that the updates occur in the correct place on the terrain.
+
+### SetHeights()
+
+Update the terrain with any height changes currently queued. Used when making changes to the terrain in batches 
+(ie: an Add() + Smooth()). In other words: if you are not using the "now" version of functions ("AddNow() vs. Add()") 
+then you need to call this function in order to see your changes show up on the terrain.
+
+### SetAlphas()
+
+Update the terrain with any alpha changes currently queued. If you want to make several texture changes to 
+a stationary terrain Area, then its best to batch them by using Texture() instead of TextureNow() and then
+manually calling this function when done.
+
+## Private Functions
+
 Coming soon
 
 {% include paginator.html %}
