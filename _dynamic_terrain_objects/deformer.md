@@ -15,10 +15,41 @@ The Deformer class is the primary interface for manipulating terrain at runtime.
 When an instance of the Deformer Script is attached to a GameObject, several 
 things happen:
 
-1. An instance of the [Area](/interactive/dynamic_terrain_objects/terrain_area) class is created.
-2. A [LocalHeightMap](/interactive/dynamic_terrain_objects/local_height_map) is instantiated. This is a cached representation of the Deformer object's geometry represented in terrain heightmap values.
-3. A LocalAlphaMap is instantiated. This is a cached representation of which positions within the terrain Area should be affected by texture updates.
-4. Current position, scale, and rotation are tracked so that if they change we can update the Area instance and LocalMaps accordingly. Note this only occurs if the variable "keepTerrainAreaUpdated" is set to true (default).
+1.  An instance of the [Area](/interactive/dynamic_terrain_objects/terrain_area) class 
+    is created. An Area represents an adjustable space around the Deformer object 
+    that tracks Terrain space coordinates. Anytime you move the Deformer object (and 
+    the keepTerrainAreaUpdated setting is turned on) the Area instance is updated with 
+    new Terrain space values. In the screenshot below you are seeing a debug view of 
+    the Area. The grey spheres each map to a Terrain heightmap 
+    [Vertex](/interactive/dynamic_terrain_objects/vertex). The red spheres indicate 
+    vertices where the Deformer object intersects with the Terrain. These are the 
+    vertices that currently would be directly modified by any height adjusting 
+    functions (Add, Subtract)
+
+    ![Terrain Area Debug](/images/dynamic_terrain_objects/deformer/terrain_area_debug.png)
+
+2.  A [LocalHeightMap](/interactive/dynamic_terrain_objects/local_height_map) is 
+    instantiated. This is a cached representation of the Deformer object's 
+    geometry represented in terrain heightmap values. If your Deformer object has
+    a Box or Sphere collider, then simple math is used to calculate this mapping
+    of the collider. If a MeshCollider is used then raytracing is used to find the
+    min and max height for each terrain vertex. This is obviously more expensive
+    than a Box or Sphere, but it is only done when the Deformer is first initialized
+    or if it is rotated/scaled. Simple transform movement will use the previously 
+    cached mapping for all colliders.
+
+3.  A [LocalAlphaMap](/interactive/dynamic_terrain_objects/local_alpha_map) is 
+    instantiated. This is a cached representation of which positions within the 
+    terrain Area should be affected by texture updates. It behaves very similar 
+    to LocalHeightMap, but tracks only a 2d representation of where the Deformer
+    currently intersects with the terrain's alphamap grid. When you call Texture()
+    on the Deformer, this is what determines where those texture updates will occur.
+    This has to be tracked separately from the HeightMap because heights and alphas
+    can, and usually are, set to different resolutions on the terrain.
+
+4.  Current position, scale, and rotation are tracked on the Deformer so that if 
+    they change we can update the Area instance and LocalMaps accordingly. Note 
+    this only occurs if the variable "keepTerrainAreaUpdated" is set to true (default).
 
 ## Variables
 
