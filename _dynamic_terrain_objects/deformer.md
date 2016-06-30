@@ -19,8 +19,8 @@ things happen:
     is created. An Area represents an adjustable space around the Deformer object 
     that tracks Terrain space coordinates. Anytime you move the Deformer object (and 
     the keepTerrainAreaUpdated setting is turned on) the Area instance is updated with 
-    new Terrain space values. In the screenshot below you are seeing a debug view of 
-    the Area. The grey spheres each map to a Terrain heightmap 
+    new Terrain space values. In the screenshot below you are seeing a debug view of a 
+    Deformer's Area instance. The grey spheres each map to a Terrain heightmap 
     [Vertex](/interactive/dynamic_terrain_objects/vertex). The red spheres indicate 
     vertices where the Deformer object intersects with the Terrain. These are the 
     vertices that currently would be directly modified by any height adjusting 

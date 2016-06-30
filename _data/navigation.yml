@@ -17,11 +17,19 @@ dynamic_terrain_objects:
 
   - title: Go Deeper
     children:
-      - title: "Deformer Class"
+      - title: "Deformer"
         url: /interactive/dynamic_terrain_objects/deformer
-      - title: "Terrain Area Class"
+      - title: "Area"
         url: /interactive/dynamic_terrain_objects/terrain_area
-      - title: "Local Height Map CLass"
+      - title: "Local Height Map"
         url: /interactive/dynamic_terrain_objects/local_height_map
+      - title: "Local Alpha Map"
+        url: /interactive/dynamic_terrain_objects/local_alpha_map
+      - title: "Vertex"
+        url: /interactive/dynamic_terrain_objects/vertex
+      - title: "Column"
+        url: /interactive/dynamic_terrain_objects/column
+      - title: "Coord"
+        url: /interactive/dynamic_terrain_objects/coord
       - title: "FAQs"
         url: /interactive/dynamic_terrain_objects/faqs
