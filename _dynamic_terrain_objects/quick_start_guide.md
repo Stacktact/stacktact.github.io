@@ -11,8 +11,6 @@ sidebar:
 
 {% include base_path %}
 
-# Quick-Start Guide
-
 The most general use of a Dynamic Terrain Object is to attach the Deformer script (found at the root of the package) to any game object with a collider, move that object around during runtime using whatever technique you wish, and then deform or update textures on the terrain based on the size and shape of the object. 
 
 Here are the steps to go from a brand new Unity project to a basic implementation. If you like, you can also just [check out a detailed documentation of the primary API](/interactive/dynamic_terrain_objects/deformer)
