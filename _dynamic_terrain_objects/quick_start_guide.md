@@ -5,10 +5,6 @@ author_profile: false
 
 title: "Quick-Start Guide"
 
-header:
-  overlay_image: "cool_pattern_splash.jpeg"
-  caption: ""
-
 sidebar:
   nav: "dynamic_terrain_objects"
 ---
