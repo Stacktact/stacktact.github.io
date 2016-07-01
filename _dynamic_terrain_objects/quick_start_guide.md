@@ -27,7 +27,7 @@ Here are the steps to go from a brand new Unity project to a basic implementatio
 
     ![Add Textures to Terrain](/images/dynamic_terrain_objects/quick_start/03_terrain_texture.png)
 
-4.  Using the built in Terrain editor, set the height of the terrain to something other than zero (ie: 300) using the flatten tool. This will raise the entire terrain up to half of its default max height. This is necessary because Terrain starts out set to its lowest height by default. When terrain is at its lowest height it cannot be lowered any further making subtract operations impossible.
+4.  Using the built in Terrain editor, set the height of the terrain to something other than zero (ie: 300) using the flatten tool. This will raise the entire terrain up to half of its default max height. This is necessary because Terrain starts out set to its lowest height by default. When terrain is at its lowest height subtract operations cannot further decrease the height.
 
     ![Flatten Terrain](/images/dynamic_terrain_objects/quick_start/04_flatten_terrain.png)
 
