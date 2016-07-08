@@ -4,6 +4,8 @@ main:
     url: /interactive
   - title: "About"
     url: /about
+  - title: "Contact"
+    url: /contact
 
 dynamic_terrain_objects:
   - title: Getting Started
