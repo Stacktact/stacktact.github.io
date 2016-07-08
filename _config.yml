@@ -76,15 +76,15 @@ author:
   location         : "Brooklyn, NY"
   bio              : " " #"Software developer with 12 years of experience crafting software and working with technology. Now running a small development shop solving big problems."
   email            :
-  contact          : "/contact.html"
+  contact          : "/contact"
   uri              : "http://jarrodspillers.com"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "https://www.facebook.com/stacktact/"
+  facebook         : "jarrod.spillers"
   foursquare       :
-  github           : "https://github.com/jspillers/"
+  github           : "jspillers"
   google_plus      :
   keybase          :
   instagram        :
@@ -92,14 +92,14 @@ author:
   linkedin         :
   pinterest        :
   soundcloud       :
-  stackoverflow    : "http://stackoverflow.com/users/1046264/jarrod-spillers"
+  stackoverflow    : "1046264/jarrod-spillers"
   steam            : 
   tumblr           :
   twitter          : 
   vine             :
   weibo            :
   xing             :
-  youtube          : "https://www.youtube.com/channel/UCUc2ZEhr2oLU5sMSdWr07Mg"
+  youtube          : "UC4xxCAHxnSIHrRovh2swjiQ"
 
 
 # Reading Files

@@ -8,13 +8,15 @@
         <ul class="visible-links">
 
           <li class="masthead__menu-item masthead__menu-item--lg">
-            <a href="{{ base_path }}/">
               {% if page.interactive == "true" %}
-                <img src="/images/stacktact_interactive_logo.png" alt="{{ site.title }}">
+                <a href="/interactive">
+                  <img src="/images/stacktact_interactive_logo.png" alt="{{ site.title }}">
+                </a>
               {% else %}
-                <img src="/images/masthead_logo.png" alt="{{ site.title }}">
+                <a href="{{ base_path }}/">
+                  <img src="/images/masthead_logo.png" alt="{{ site.title }}">
+                </a>
               {% endif %}
-            </a>
           </li>
 
           {% if page.interactive == "true" %}
