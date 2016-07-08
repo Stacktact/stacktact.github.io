@@ -70,13 +70,14 @@ google_ad_slot           :
 
 # Site Author
 author:
+  avatar           : "bio-photo.png"
   name             : "Jarrod Spillers"
-  avatar           : "bio-photo.jpg"
-  bio              : ""
+  title            : "Owner/Operator"
   location         : "Brooklyn, NY"
+  bio              : " " #"Software developer with 12 years of experience crafting software and working with technology. Now running a small development shop solving big problems."
   email            :
   contact          : "/contact.html"
-  uri              :
+  uri              : "http://jarrodspillers.com"
   bitbucket        :
   codepen          :
   dribbble         :
