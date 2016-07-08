@@ -25,6 +25,7 @@ en: &DEFAULT_EN
   powered_by            : "Powered by"
   website_label         : "Website"
   email_label           : "Email"
+  contact_label         : "Contact"
   recent_posts          : "Recent Posts"
   undefined_wpm         : "Undefined parameter words_per_minute at _config.yml"
 en-US:
@@ -57,6 +58,7 @@ es: &DEFAULT_ES
   powered_by            : "Powered by"
   website_label         : "Sitio web"
   email_label           : "Email"
+  contact_label         : "Contact"
   recent_posts          : "Entradas recientes"
   undefined_wpm         : "Parametro words_per_minute (Palabras por minuto) no definido en _config.yml"
 es-ES:
@@ -89,6 +91,7 @@ fr: &DEFAULT_FR
   powered_by            : "Propulsé par"
   website_label         : "Site"
   email_label           : "Email"
+  contact_label         : "Contact"
   recent_posts          : "Posts récents"
   undefined_wpm         : "Le paramètre words_per_minute n'est pas défini dans _config.yml"
 fr-FR:

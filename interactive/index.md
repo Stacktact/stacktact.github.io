@@ -1,8 +1,8 @@
 ---
 layout: splash
+interactive: "true"
 author_profile: false
 
-interactive: "true"
 title: "Mine for gold in the frozen north!"
 excerpt: "We specialize in Unity3D and are currently developing a gold mining simulator"
 

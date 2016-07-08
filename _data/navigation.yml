@@ -7,6 +7,15 @@ main:
   - title: "Contact"
     url: /contact
 
+# main links links
+interactive:
+  - title: "Main"
+    url: /
+  - title: "About"
+    url: /about
+  - title: "Contact"
+    url: /contact
+
 dynamic_terrain_objects:
   - title: Getting Started
     children:

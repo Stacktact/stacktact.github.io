@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Stacktact Inc."
 title_separator          : "-"
-name                     : "Jarrod Spillers"
+name                     : "Stacktact Inc."
 description              : "Full stack web development"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -17,6 +17,13 @@ gh_repo                  :
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
+
+environments:
+  development:
+    url: http://localhost:4000
+  production: 
+    url: http://stacktact.com
+
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", custom"
   disqus:
@@ -66,16 +73,17 @@ author:
   name             : "Jarrod Spillers"
   avatar           : "bio-photo.jpg"
   bio              : ""
-  location         : "NYC"
+  location         : "Brooklyn, NY"
   email            :
+  contact          : "/contact.html"
   uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : "https://www.facebook.com/stacktact/"
   foursquare       :
-  github           :
+  github           : "https://github.com/jspillers/"
   google_plus      :
   keybase          :
   instagram        :
@@ -83,14 +91,14 @@ author:
   linkedin         :
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
+  stackoverflow    : "http://stackoverflow.com/users/1046264/jarrod-spillers"
+  steam            : 
   tumblr           :
-  twitter          :
+  twitter          : 
   vine             :
   weibo            :
   xing             :
-  youtube          :
+  youtube          : "https://www.youtube.com/channel/UCUc2ZEhr2oLU5sMSdWr07Mg"
 
 
 # Reading Files
