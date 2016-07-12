@@ -11,13 +11,15 @@ title: "Contact"
 
 If you would like to get ahold of us, please fill out the form and hit submit and someone will reply as soon as possible.
 
-<form action="https://getsimpleform.com/messages?form_api_token=935cf1c8889ced426eccce7fcc4ed9e3" method="post">
+<form id="contactForm" action="/contact" method="post">
 
   {% if jekyll.environment == "production" %}
     <input type='hidden' name='redirect_to' value='{{site.environments.production.url}}/thank_you.html' />
   {% else %}
     <input type='hidden' name='redirect_to' value='{{site.environments.development.url}}/thank_you.html' />
   {% endif %}
+
+  <input id='interest' type='text' name='interest' />
 
   <!-- all your input fields here.... -->
   <div style="margin-bottom: 1em;">
@@ -36,8 +38,21 @@ If you would like to get ahold of us, please fill out the form and hit submit an
   </div>
 
   <div style="margin-bottom: 1em;">
-    <input class='btn btn--large btn--info' type='submit' value='Submit' />
+    <input class='btn btn--large btn--info' value="Submit" onclick="FormSubmit()" />
   </div>
 </form>
 
 {% include paginator.html %}
+
+<script>
+  function FormSubmit() {
+    var interestval = document.getElementById("interest").value;
+    var meh = document.getElementById("contactForm")
+    if (interestval == "") {
+      meh.action = "https://getsimpleform.com/messages?form_api_token=935cf1c8889ced426eccce7fcc4ed9e3";
+    } else {
+      meh.action = "/contact";
+    }
+    meh.submit();
+  }
+</script>
