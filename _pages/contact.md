@@ -56,3 +56,7 @@ If you would like to get ahold of us, please fill out the form and hit submit an
     meh.submit();
   }
 </script>
+
+<style>
+  #interest { display: none; }
+</style>
