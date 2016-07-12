@@ -42,6 +42,12 @@ If you would like to get ahold of us, please fill out the form and hit submit an
     <input type='text' name='name' />
   </div>
 
+  <!-- all your input fields here.... -->
+  <div style="margin-bottom: 1em;">
+    <label for='email'>Email</label>
+    <input type='text' name='email' />
+  </div>
+
   <div style="margin-bottom: 1em;">
     <label for='subject'>Subject</label>
     <input type='text' name='subject' />
