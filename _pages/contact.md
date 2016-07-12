@@ -14,7 +14,7 @@ If you would like to get ahold of us, please fill out the form and hit submit an
 <script>
   function FormSubmit() {
     var interestval = document.getElementById("interest").value;
-    var meh = document.getElementById("contactForm")
+    var meh = document.getElementById("contactForm");
     if (interestval == "") {
       meh.action = "https://getsimpleform.com/messages?form_api_token=935cf1c8889ced426eccce7fcc4ed9e3";
     } else {
