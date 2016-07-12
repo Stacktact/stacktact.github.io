@@ -11,6 +11,21 @@ title: "Contact"
 
 If you would like to get ahold of us, please fill out the form and hit submit and someone will reply as soon as possible.
 
+<script>
+  function FormSubmit() {
+    var interestval = document.getElementById("interest").value;
+    var meh = document.getElementById("contactForm")
+    if (interestval == "") {
+      meh.action = "https://getsimpleform.com/messages?form_api_token=935cf1c8889ced426eccce7fcc4ed9e3";
+    } else {
+      meh.action = "/contact";
+    }
+    meh.submit();
+  }
+</script>
+
+<style> #interest { display: none; } </style>
+
 <form id="contactForm" action="/contact" method="post">
 
   {% if jekyll.environment == "production" %}
@@ -44,19 +59,3 @@ If you would like to get ahold of us, please fill out the form and hit submit an
 
 {% include paginator.html %}
 
-<script>
-  function FormSubmit() {
-    var interestval = document.getElementById("interest").value;
-    var meh = document.getElementById("contactForm")
-    if (interestval == "") {
-      meh.action = "https://getsimpleform.com/messages?form_api_token=935cf1c8889ced426eccce7fcc4ed9e3";
-    } else {
-      meh.action = "/contact";
-    }
-    meh.submit();
-  }
-</script>
-
-<style>
-  #interest { display: none; }
-</style>
