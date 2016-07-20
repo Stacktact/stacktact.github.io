@@ -42,5 +42,5 @@ dynamic_terrain_objects:
         url: /interactive/dynamic_terrain_objects/column
       - title: "Coord"
         url: /interactive/dynamic_terrain_objects/coord
-      - title: "FAQs"
-        url: /interactive/dynamic_terrain_objects/faqs
+      #- title: "FAQs"
+      #  url: /interactive/dynamic_terrain_objects/faqs
