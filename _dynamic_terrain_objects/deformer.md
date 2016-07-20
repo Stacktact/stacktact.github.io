@@ -81,6 +81,10 @@ Should the heightmap be changed for any column that is touching the deformer (co
 
 If checked, any change to the position or rotation of the game object with this script will update the location and size of the Terrain Area so that subsequent terrain modifications will occur in the correct location and in the correct shape. Turning this off is more performant if you are able to call "UpdateAreaPosition()" manually, but if an object is making continious updates to a terrain while moving you probably want to have this set to true (on).
 
+### restoreTerrainOnExit
+
+If checked, any changes to the terrain will be reset back to their original values when the game exits. If unchecked then the changes will remain in the terrain data effectively making them permanent.
+
 ### terrain;
 
 The terrain instance you want this object to modify. Defaults to Terrain.activeTerrain if not set. Cannot currently handle multiple terrains, but you could always switch them on the fly via scripting.

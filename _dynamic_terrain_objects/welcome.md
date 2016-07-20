@@ -37,6 +37,7 @@ and then call "SetHeights" and/or "SetAlphas" once finished.  Please see the
 * AlphaFitType
 * HeightFitType
 * keepTerrainAreaUpdated
+* restoreTerrainOnExit
 
 ### Public Functions
 
