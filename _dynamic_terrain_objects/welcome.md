@@ -20,10 +20,25 @@ Runtime modification of Unity Terrain is a tricky problem to solve. Managing the
 
 Check out the [Quick-Start Guide](/interactive/dynamic_terrain_objects/quick_start_guide.html) to get going.
 
-## Deformer
+## Library Overview: Deformer class
 
-Quick overview of the Deformer class public API. All "Now" functions are to conveniently set terrain changes and commit them to the 
-terrain in one step. For compound deformations use the non "Now" versions and then call "SetHeights" and/or "SetAlphas" once finished.
+This is a quick overview of the Deformer class which is the main point of interaction with the library. Drop the Deformer script on
+your GameObject and it is now a dynamic terrain object. All "Now" functions are to conveniently set terrain changes and commit them to the 
+terrain in one step. For compound deformations (for example: Add and Smooth in one frame) use the non-"Now" versions of each function 
+and then call "SetHeights" and/or "SetAlphas" once finished.  Please see the 
+[Deformer's detailed class documentation](/interactive/dynamic_terrain_objects/deformer) for more in depth information.
+
+### Attributes 
+
+* terrainAreaPadding
+* terrainTextureIndex
+* terrainTextureOpacity
+* alphaPadding
+* AlphaFitType
+* HeightFitType
+* keepTerrainAreaUpdated
+
+### Public Functions
 
 * AddNow()
 * Add()
