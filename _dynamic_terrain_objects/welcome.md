@@ -20,4 +20,37 @@ Runtime modification of Unity Terrain is a tricky problem to solve. Managing the
 
 Check out the [Quick-Start Guide](/interactive/dynamic_terrain_objects/quick_start_guide.html) to get going.
 
+Quick overview of the Deformer class public API. All "Now" functions are to conveniently set terrain changes and commit them to the 
+terrain in one step. For compound deformations use the non "Now" versions and then call "SetHeights" and/or "SetAlphas" once finished.
+
+### AddNow()
+
+### Add()
+
+### SubtractNow()
+
+### Subtract()
+
+### SmoothNow()
+
+### Smooth()
+
+### TextureNow()
+
+### Texture()
+
+### Displace()
+
+### ShowAreaVertices()
+
+### ShowAreaAlphas()
+
+### DestroyDebugObjects()
+
+### UpdateAreaPosition()
+
+### SetHeights()
+
+### SetAlphas()
+
 {% include paginator.html %}
