@@ -34,10 +34,13 @@ and then call "SetHeights" and/or "SetAlphas" once finished.  Please see the
 * terrainTextureIndex
 * terrainTextureOpacity
 * alphaPadding
-* AlphaFitType
-* HeightFitType
+* alphaFitType
+* heightFitType
+* flattenTo
+* flattenArea
 * keepTerrainAreaUpdated
 * restoreTerrainOnExit
+* useDelayedLOD
 
 ### Public Functions
 
@@ -49,7 +52,8 @@ and then call "SetHeights" and/or "SetAlphas" once finished.  Please see the
 * Smooth()
 * TextureNow()
 * Texture()
-* Displace()
+* Embrace()
+* Flatten()
 * ShowAreaVertices()
 * ShowAreaAlphas()
 * DestroyDebugObjects()
