@@ -77,13 +77,25 @@ Should the alphamap be changed for any column that is touching the deformer (col
 
 Should the heightmap be changed for any column that is touching the deformer (column fit) or should we only change for cells completely inside the collider (vertex fit)
 
+### flattenTo
+
+When flattening, what height relative to the top and bottom of the deformer should we flatten to? If set to 1, flatten sets heights even with the top of the deformer... if 0, the bottom of the deformer.
+
+### flattenArea
+
+When flattening, should we set all points in the deformer's area to the flatten height or just the points which intersect with the deformer?
+
 ### keepTerrainAreaUpdated
 
-If checked, any change to the position or rotation of the game object with this script will update the location and size of the Terrain Area so that subsequent terrain modifications will occur in the correct location and in the correct shape. Turning this off is more performant if you are able to call "UpdateAreaPosition()" manually, but if an object is making continious updates to a terrain while moving you probably want to have this set to true (on).
+If checked (true), any change to the position or rotation of the game object with this script will update the location and size of the Terrain Area so that subsequent terrain modifications will occur in the correct location and in the correct shape. Turning this off is more performant if you are able to call "UpdateAreaPosition()" manually, but if an object is making continious updates to a terrain while moving you probably want to have this set to true (on).
 
 ### restoreTerrainOnExit
 
-If checked, any changes to the terrain will be reset back to their original values when the game exits. If unchecked then the changes will remain in the terrain data effectively making them permanent.
+If checked (true), any changes to the terrain will be reset back to their original values when the game exits. If unchecked then the changes will remain in the terrain data effectively making them permanent.
+
+### useDelayedLOD
+
+If checked (true), any updates to Terrain heights will be done without automatically updating LOD. This is much faster and is recommended for most applications, but you will need to call ApplyDelayedHeightmapModification() on your terrain object in order to update the LOD.
 
 ### terrain;
 
@@ -137,12 +149,29 @@ specified for this object.
 Exactly the same as TextureNow(), but does not automatically commit the changes. Call SetAlphas() 
 to commit alpha changes set to the Area by Texture().
 
+### FlattenNow()
+
+Sets all heights to be equal to a specified height on the deformer. If the "flattenTo" attribute is
+set to 1, then Flatten() will set all heights even with the very top of the deformer. If "flattenTo" is 
+set to 0, the Flatten() will set all heights even with the bottom. Anything in between 0 and 1 will flatten
+to a relative position on the deformer. If "flattenArea" is selected, then the entire Area object will be 
+flattened to the specified height instead of just the points that intersect with the deformer.
+
+### Flatten()
+
+Exactly the same as FlattenNow(), but does not automatically commit the changes. Call SetHeights() 
+to commit height changes.
+
+### Embrace()
+
+If the object is higher than the terrain, bring the terrain up to meet the bottom of the object
+and have it surround it slightly. Useful for creating a "perch" for your objects, or even a volcano 
+type shape if used repeatedly.
+
 ### Displace()
 
-Simulates the creation of a crater if the object is positioned partially below the terrain. 
-Creates a pedastle type formation when the object is positioned above the terrain. This 
-function is a combination of Subtract(), Smooth(), and Texture() which demonstrates a simple way 
-the core functions can be composed together to create more complex deformations. 
+Currently being refactored, a much better, true version of object volume displacement will be added
+in the near future.
 
 ### ShowAreaVertices()
 
