@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 layout: null
 
-title: "Erik's Hats"
+title: "Sorting Erik's Hats: Very Important"
 hats:
   - hat_01:
     name: hat_01
@@ -63,7 +63,7 @@ hats:
 ---
 
 <div class="wrapper">
-  <h2>Sort</h2>
+  <h2>{{page.title}}</h2>
 
   <div id="sorts" class="button-group">
     <button class="button is-checked" data-sort-by="original-order">original</button>
