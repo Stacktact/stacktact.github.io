@@ -143,7 +143,7 @@ body {
 
 .wrapper {
   width: 100%;
-  margin: 0 0 0 40px; 
+  margin: 40px 0 0 40px; 
 }
 
 /* ---- button ---- */
