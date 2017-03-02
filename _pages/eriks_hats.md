@@ -240,7 +240,7 @@ body {
   padding: 0;
 }
 
-.grid-item p {
+.grid-item span {
   display: none;
 }
 </style>
