@@ -65,13 +65,20 @@ hats:
 <div class="wrapper">
   <h2>{{page.title}}</h2>
 
-  <div id="sorts" class="button-group">
-    <button class="button is-checked" data-sort-by="original-order">original</button>
-    <button class="button" data-sort-by="hatcolor">color</button>
-    <button class="button" data-sort-by="poofyness">poofyness</button>
-    <button class="button" data-sort-by="hatheight">height</button>
-    <button class="button" data-sort-by="fabulousness">fabulousness</button>
-    <button class="button" data-sort-by="random">random</button>
+  <div class="sort-ui">
+    <div id="sorts" class="button-group">
+      <button class="button is-checked" data-sort-by="original-order">original</button>
+      <button class="button" data-sort-by="hatcolor">color</button>
+      <button class="button" data-sort-by="poofyness">poofyness</button>
+      <button class="button" data-sort-by="hatheight">height</button>
+      <button class="button" data-sort-by="fabulousness">fabulousness</button>
+      <button class="button" data-sort-by="random">random</button>
+    </div>
+
+    <div class="sort-direction">
+      <input type="radio" name="sort-dir" value="asc" checked="checked"> Ascending <br>
+      <input type="radio" name="sort-dir" value="desc"> Descending<br>
+    </div>
   </div>
 
   <div class="grid cf">
@@ -128,9 +135,11 @@ hats:
       });
     });
 
-    $grid.on( 'arrangeComplete', function(event, filteredItems) {
-      console.log($(filteredItems));
+    $('.sort-direction').on( 'click', 'input', function() {
+      var sortAsc = $(this).val() === 'asc' ? true : false;
+      $grid.isotope({ sortAscending: sortAsc });
     });
+
   });
 </script>
 
@@ -186,14 +195,17 @@ body {
 
 /* ---- button-group ---- */
 
-.button-group {
+.sort-direction {
+  margin-left: 30px;
+  float: left;
+}
+
+.sort-ui {
   margin-bottom: 20px;
 }
 
-.button-group:after {
-  content: '';
-  display: block;
-  clear: both;
+.button-group {
+  float: left;
 }
 
 .button-group .button {
@@ -214,6 +226,8 @@ body {
 }
 
 /* clear fix */
+.sort-ui:after, 
+.button-group:after, 
 .grid:after {
   content: '';
   display: block;
