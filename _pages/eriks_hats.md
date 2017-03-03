@@ -11,13 +11,13 @@ hats:
     color: 4
     poofyness: 3
     height: 3
-    fabulousness: 1
+    fabulousness: 2
   - hat_02:
     name: hat_02
     color: 2
     poofyness: 8
     height: 5
-    fabulousness: 1
+    fabulousness: 5
   - hat_03:
     name: hat_03
     color: 5
@@ -29,37 +29,37 @@ hats:
     color: 3
     poofyness: 7
     height: 4
-    fabulousness: 1
+    fabulousness: 7
   - hat_05:
     name: hat_05
     color: 9
     poofyness: 9
     height: 9
-    fabulousness: 1
+    fabulousness: 4
   - hat_06:
     name: hat_06
     color: 1
     poofyness: 4
     height: 7
-    fabulousness: 1
+    fabulousness: 5
   - hat_07:
     name: hat_07
     color: 6
     poofyness: 6
     height: 6
-    fabulousness: 1
+    fabulousness: 6
   - hat_08:
     name: hat_08
     color: 9
     poofyness: 1
     height: 1
-    fabulousness: 1
+    fabulousness: 9
   - hat_09:
     name: hat_09
     color: 8
     poofyness: 5
     height: 8
-    fabulousness: 1
+    fabulousness: 8
 ---
 
 <div class="wrapper">
@@ -96,6 +96,8 @@ hats:
 <script src="http://npmcdn.com/imagesloaded@4/imagesloaded.pkgd.js" type="text/javascript"></script>
 
 <script>
+  // http://isotope.metafizzy.co/
+
   $( document ).ready(function() {
     var $grid = $('.grid').imagesLoaded( function() {
       $('.grid').isotope({
