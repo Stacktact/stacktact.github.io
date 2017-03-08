@@ -11,43 +11,43 @@ hats:
     color: 4
     poofyness: 3
     height: 3
-    fabulousness: 2
+    fabulousness: 5
   - hat_02:
     name: hat_02
     color: 2
     poofyness: 8
     height: 5
-    fabulousness: 5
+    fabulousness: 2
   - hat_03:
     name: hat_03
     color: 5
     poofyness: 2
     height: 2
-    fabulousness: 1
+    fabulousness: 8
   - hat_04:
     name: hat_04
     color: 3
     poofyness: 7
     height: 4
-    fabulousness: 7
+    fabulousness: 1
   - hat_05:
     name: hat_05
     color: 9
     poofyness: 9
     height: 9
-    fabulousness: 4
+    fabulousness: 6
   - hat_06:
     name: hat_06
     color: 1
     poofyness: 4
     height: 7
-    fabulousness: 5
+    fabulousness: 3
   - hat_07:
     name: hat_07
     color: 6
     poofyness: 6
     height: 6
-    fabulousness: 6
+    fabulousness: 4
   - hat_08:
     name: hat_08
     color: 9
@@ -59,7 +59,7 @@ hats:
     color: 8
     poofyness: 5
     height: 8
-    fabulousness: 8
+    fabulousness: 7
 ---
 
 <div class="wrapper">
