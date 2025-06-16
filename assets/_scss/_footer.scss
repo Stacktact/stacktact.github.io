@@ -69,3 +69,14 @@
     font-weight: bold;
   }
 }
+
+.page__footer-links {
+  margin: 1em 0;
+  font-family: $sans-serif-narrow;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+  
+  a {
+    font-weight: bold;
+  }
+}
