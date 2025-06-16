@@ -1,3 +1,9 @@
+---
+layout: single
+title: "SMS Terms"
+permalink: /sms-terms/
+---
+
 # Stacktact SMS Messaging Terms & Opt-in Policy
 
 **Effective Date:** June 16, 2025
